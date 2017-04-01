@@ -1,29 +1,69 @@
 <nav class ="navbar navbar-default">
-      <a href="#/search"><img src="images/discgo.png" class="img-responsive margin" style="display:inline" alt="music" width="225" height="225"></a>
-</nav>
+  <div class="container-artist">
+      <a href="#/search"><img src="images/discgo.png" class="img-responsive margin artist" style="display:inline" alt="music" width="125" height="125"></a>
+
+  <div class="navbar-header">
+
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+     </div>
+   </div>
+      <div class="collapse navbar-collapse first second" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
+      </div>
+  </nav>
+
 <div class="container-fluid">
-<div class="row">
-  <div class="col-sm-2"><img class="img-circle" ng-src="{{artistImage}}" /></div>
-  <div class="col-sm-10">
-    <div class="panel panel-default">
-      <div class="panel-heading">{{artist}}<p class="tour" on-tour ng-if="onTourData == 1"></p></div>
-      <div class="panel-body" ng-bind-html="artistBio | unsafe">Panel Content</div>
-    </div>
+  <div class="row">
+  <div class="col-sm-4">
+    <img class = "artistImage" ng-src="{{artistImage}}"/>
+    <p class="tour" on-tour ng-if="onTourData == 1"></p>
   </div>
-</div>
+
+    <div class="col-sm-8">
+      <div>
+        <div class = "artistName">
+            <p>{{artist}}<p>
+        </div>
+        <div ng-bind-html="artistBio | unsafe">Panel Content</div>
+      </div>
+  </div>
+</div> <!-- // end of row -->
+
 <div class="row">
-  <div class="col-sm-2"></div>
-  <div class="col-sm-10">
+  <div class="col-sm-6">
     <div class="panel panel-default">
       <div class="panel-heading">Top Albums for {{artist}}</div>
       <div class="panel-body">
-      <ul class="albumAlign">{{albumName1}}<br><img ng-src="{{albumImage1}}" /></ul>
-      <ul class="albumAlign">{{albumName2}}<br><img ng-src="{{albumImage2}}" /></ul>
-      <ul class="albumAlign">{{albumName3}}<br><img ng-src="{{albumImage3}}" /></ul>
-      <ul class="albumAlign">{{albumName4}}<br><img ng-src="{{albumImage4}}" /></ul>
-      <ul class="albumAlign">{{albumName5}}<br><img ng-src="{{albumImage5}}" /></ul>
+      <ul class="albumAlign" ng-if="albumName1 != '(null)'">{{albumName1}}<br><img ng-src="{{albumImage1}}" /></ul>
+      <ul class="albumAlign" ng-if="albumName2 != '(null)'">{{albumName2}}<br><img ng-src="{{albumImage2}}" /></ul>
+      <ul class="albumAlign" ng-if="albumName3 != '(null)'">{{albumName3}}<br><img ng-src="{{albumImage3}}" /></ul>
+      <ul class="albumAlign" ng-if="albumName4 != '(null)'">{{albumName4}}<br><img ng-src="{{albumImage4}}" /></ul>
+      <ul class="albumAlign" ng-if="albumName5 != '(null)'">{{albumName5}}<br><img ng-src="{{albumImage5}}" /></ul>
     </div>
   </div>
+</div>
+<div class="col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">Top Tracks for {{artist}}</div>
+      <div class="panel-body">
+      <ul class="albumAlign">{{trackName1}}</ul>
+      <ul class="albumAlign">{{trackName2}}</ul>
+      <ul class="albumAlign">{{trackName3}}</ul>
+      <ul class="albumAlign">{{trackName4}}</ul>
+      <ul class="albumAlign">{{trackName5}}</ul>
+      <ul class="albumAlign">{{trackName6}}</ul>
+      <ul class="albumAlign">{{trackName7}}</ul>
+      <ul class="albumAlign">{{trackName8}}</ul>
+      <ul class="albumAlign">{{trackName9}}</ul>
+      <ul class="albumAlign">{{trackName10}}</ul>
+    </div>
+  </div>
+</div>
 </div>
 </div>
 </div>
