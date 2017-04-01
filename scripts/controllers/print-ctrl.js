@@ -20,11 +20,11 @@ app.controller('printCtrl', function($scope, discGoFactory){
     $scope.albumName3 = resp.topalbums.album["2"].name;
     $scope.albumName4 = resp.topalbums.album["3"].name;
     $scope.albumName5 = resp.topalbums.album["4"].name;
-    $scope.albumImage1 = resp.topalbums.album["0"].image[1]["#text"];
-    $scope.albumImage2 = resp.topalbums.album["1"].image[1]["#text"];
-    $scope.albumImage3 = resp.topalbums.album["2"].image[1]["#text"];
-    $scope.albumImage4 = resp.topalbums.album["3"].image[1]["#text"];
-    $scope.albumImage5 = resp.topalbums.album["4"].image[1]["#text"];
+    $scope.albumImage1 = resp.topalbums.album["0"].image[2]["#text"];
+    $scope.albumImage2 = resp.topalbums.album["1"].image[2]["#text"];
+    $scope.albumImage3 = resp.topalbums.album["2"].image[2]["#text"];
+    $scope.albumImage4 = resp.topalbums.album["3"].image[2]["#text"];
+    $scope.albumImage5 = resp.topalbums.album["4"].image[2]["#text"];
   });
 
   $scope.tracksInfo = discGoFactory.searchTracks(artist).then(function(resp){

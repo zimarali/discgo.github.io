@@ -18,7 +18,7 @@ app.factory('discGoFactory', function($http) {
   function searchArtist(searchCriteria) {
       var promise = $http({
         method: 'GET',
-        url: 'https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + searchCriteria + '&api_key=2f32cf4dbf47aa1b214b2cb2d18f9e24&autocorrect=1&format=json'
+        url: 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + searchCriteria + '&api_key=2f32cf4dbf47aa1b214b2cb2d18f9e24&autocorrect=1&format=json'
       }).then(function successCallback(response) {
         artistObject = response;
         return artistObject.data;
@@ -33,7 +33,7 @@ app.factory('discGoFactory', function($http) {
   function searchAlbum(searchCriteria) {
       var promise = $http({
         method: 'GET',
-        url: 'https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + searchCriteria + '&api_key=2f32cf4dbf47aa1b214b2cb2d18f9e24&autocorrect=1&limit=5&format=json'
+        url: 'http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + searchCriteria + '&api_key=2f32cf4dbf47aa1b214b2cb2d18f9e24&autocorrect=1&limit=5&format=json'
       }).then(function successCallback(response) {
         albumObject = response;
         return albumObject.data;
@@ -44,7 +44,7 @@ app.factory('discGoFactory', function($http) {
     function searchTracks(searchCriteria) {
       var promise = $http({
         method: 'GET',
-        url: 'https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=' + searchCriteria + '&api_key=2f32cf4dbf47aa1b214b2cb2d18f9e24&autocorrect=1&limit=10&format=json'
+        url: 'http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=' + searchCriteria + '&api_key=2f32cf4dbf47aa1b214b2cb2d18f9e24&autocorrect=1&limit=10&format=json'
       }).then(function successCallback(response) {
         tracksObject = response;
         return tracksObject.data;

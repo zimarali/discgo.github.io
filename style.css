@@ -1,9 +1,10 @@
 
 body {
-    font: 20px Montserrat, sans-serif;
+    font: 14px Montserrat, sans-serif;
     line-height: 1.8;
     color: black;
     height: 100%;
+
 }
 
 .artistName p {
@@ -17,8 +18,36 @@ body {
   text-align: center;
 }
 
+.albumAlign {
+  text-align: center;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+
+}
+.albumAlign img {
+  border-radius: 50%;
+  border: 3px solid black;
+  padding 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+.albumAlign h5 {
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+h2 {
+  margin-top: 40px;
+  text-align: center;
+  font-family: 'Teko', sans-serif;
+}
+
 p {
-  font-size: 16px;
+  font-size: 14px;
 }
 .margin {
   margin-bottom: 45px;
