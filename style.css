@@ -97,7 +97,8 @@ input[type=text]:focus {
   }
 
 
-.navbar {
+.titleDisplay {
+    height: 150px;
     padding-top: 10px;
     padding-bottom: 10px;
     border: 0px;
@@ -106,6 +107,10 @@ input[type=text]:focus {
     font-size: 12px;
     letter-spacing: 5px;
     background-color: #144966;
+}
+
+.titleDisplay img {
+  float: right;
 }
 
 button {
