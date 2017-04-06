@@ -1,63 +1,157 @@
-
 body {
     font: 14px Montserrat, sans-serif;
     line-height: 1.8;
-    color: black;
     height: 100%;
-
 }
 
-.artistName p {
+#backgroundContainer {
+  background-color: rgba(225, 225, 225, .85);
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 20px 20px 10px rgba(0,0,0,0.10);
+  padding: 40px;
+}
+
+.topBanner {
+    height: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0px;
+    letter-spacing: 5px;
+    background-color: #23211d;
+    color: #ffffff;
+    background-attachment: fixed;
+}
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    letter-spacing: 5px;
+    background-color: #23211d;
+    font-family: 'Fjalla One', sans-serif;
+
+  }
+
+.artistName h1 {
+  color: #ffffff;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 6vw;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding: 2%;
+}
+
+footer p {
+    font-family: 'Fjalla One', sans-serif;
+    padding: 2%;
+    font-size: 20px;
+}
+
+.artistImage {
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 5px 5px 2px rgba(0,0,0,0.2);
+}
+
+
+.tour {
+  max-width: 35%;
+  display: block;
+  margin: 0 auto;
+}
+
+#artistBio {
+  display: inline-block;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.6vw;
+  margin: 0 auto;
   color: black;
-  font-family: 'Rubik Mono One', sans-serif;
-  font-size: 50px;
+
 }
 
-.artistName {
-  height: 120px;
+#tagLine {
+  text-align: center;
+  color: #BFBFBF;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 2px;
+  font-size: 200%;
+  margin-bottom: 40px;
+}
+
+.albumContainer {
   text-align: center;
 }
 
 .albumAlign {
-  text-align: center;
   display: inline-block;
-  height: 200px;
-  width: 200px;
-  margin: 10px;
+  margin: 3%;
+  text-align: center;
 
 }
+
 .albumAlign img {
-  border-radius: 50%;
-  border: 3px solid black;
-  padding 5px;
   display: inline-block;
-  text-align: center;
+  margin: 0 auto;
+  width: 1 vw;
+  box-shadow: 5px 5px 2px rgba(0,0,0,0.2);
+  border-radius: 1px;
 }
 
-.albumAlign h5 {
-  text-align: center;
-  margin-left: 25%;
-  margin-right: 25%;
+.albumAlign h4 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 100%;
+  display: block;
+  color: black;
 }
 
-h2 {
+
+.albumAlign:hover img {
+  transform: scale(1.1);
+}
+
+h1 {
+  padding: 20px;
   margin-top: 40px;
   text-align: center;
-  font-family: 'Teko', sans-serif;
+  font-family: 'Abril Fatface', cursive;
+  color: black;
+}
+
+#tracks p {
+  text-align: center;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 2px;
+  font-size: 150%;
+  color: black;
 }
 
 p {
   font-size: 14px;
+  color: black;
 }
-.margin {
-  margin-bottom: 45px;
-}
-.bg-1 {
-    background-color: #144966; /* Blue */
+
+
+#searchPage {
+    background-color: #23162d;
     color: black;
 }
+#aboutPage {
+  background-color: grey;
+}
+#aboutPageBar {
+  background-color: #23162d;
+}
+.bg-1 {
+  padding-top: 10px;
+  padding-bottom: 500px;
+}
 .bg-2 {
-    background-color: #2f2f2f; /* Black Gray */
+    background-color: #BFBFBF;
     color: #fff;
 }
 
@@ -66,7 +160,7 @@ input[type=text] {
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 14px;
     background-color: white;
     background-image: url('search-icon.png');
     background-position: 2px 2px;
@@ -75,47 +169,44 @@ input[type=text] {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
+
+
 /* When the input field gets focus, change its width to 100% */
 input[type=text]:focus {
     width: 100%;
 }
 
-.container-fluid {
-    padding-top: 10px;
-    padding-bottom: 500px;
+.containter-foot {
+  display: block;
+  background-color: #f6f2f7;
 }
+
+#records {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    height: 100%;
+    width: 100%;
+    background-image: url(record-background-tile.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+
 .container-artist {
   height: 90px;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: right;
 }
-.img-artist {
-    margin-left: auto;
-    margin-right: auto;
-    width: 180px;
-  }
 
-
-.titleDisplay {
-    height: 150px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 0px;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-    background-color: #144966;
-}
-
-.titleDisplay img {
-  float: right;
-}
 
 button {
   float: right;
+  margin-left: 5px;
 }
+
+
 .fa {
   padding: 20px;
   font-size: 25px;
@@ -126,45 +217,36 @@ button {
   border-radius: 50%;
 }
 
-.artistImage {
-  max-width: 90%;
-  max-height: none;
-  margin-left: auto;
-  margin-right: auto;
-  border: 12px solid black;
-
-}
-
-.fa:hover {
+fa:hover {
     opacity: 0.7;
 }
 
 .fa-facebook {
-  color: white;
+  color: black;
 }
 
 .fa-twitter {
-  color: white;
+  color:black;
 }
 
 .fa-google {
-  color: white;
+  color: black;
 }
 
 .fa-linkedin {
-  color: white;
+  color: black;
 }
 
 .fa-youtube {
-  color: white;
+  color: black;
 }
 
 .fa-instagram {
-  color: white;
+  color: black;
 }
 
 .fa-pinterest {
-  color: white;
+  color: black;
 }
 
 .heading-title {
@@ -229,7 +311,7 @@ button {
     transform: translateY(-55%);
     -webkit-transition: all 0.3s 0.2s;
     transition: all 0.3s 0.2s;
-    padding: 0 20px;
+    /*padding: 0 20px;*/
 }
 .desk, .desk h4, .team-hover .s-link a {
     text-align: center;
@@ -241,19 +323,7 @@ button {
 .team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
     opacity: 1;
 }
-.team-hover .s-link {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    opacity: 0;
-    text-align: center;
-    -webkit-transform: translateY(45%);
-    -ms-transform: translateY(45%);
-    transform: translateY(45%);
-    -webkit-transition: all 0.3s 0.2s;
-    transition: all 0.3s 0.2s;
-    font-size: 35px;
-}
+
 .desk, .desk h4, .team-hover .s-link a {
     text-align: center;
     color: #222;
@@ -281,4 +351,8 @@ h5 {
     text-transform: uppercase;
     color: #a5a5a5;
     letter-spacing: 1px;
+}
+
+.meet {
+  color: black;
 }

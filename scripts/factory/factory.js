@@ -3,6 +3,7 @@ var app = angular.module('discGo');
 app.factory('discGoFactory', function($http) {
 
   var artistName = "";
+  var ticketMaster = "";
 
   return {
       searchArtist: searchArtist, // name of the function pulling the artist data from the api
@@ -12,7 +13,9 @@ app.factory('discGoFactory', function($http) {
       searchTracks: searchTracks,
       returnTracksData: returnTracksData,
       storeArtistName: storeArtistName,
-      getArtistName: getArtistName
+      getArtistName: getArtistName,
+      storeUrl: storeUrl,
+      getUrl: getUrl
     };
 
   function searchArtist(searchCriteria) {
@@ -33,7 +36,7 @@ app.factory('discGoFactory', function($http) {
   function searchAlbum(searchCriteria) {
       var promise = $http({
         method: 'GET',
-        url: 'https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + searchCriteria + '&api_key=2f32cf4dbf47aa1b214b2cb2d18f9e24&autocorrect=1&limit=5&format=json'
+        url: 'https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + searchCriteria + '&api_key=2f32cf4dbf47aa1b214b2cb2d18f9e24&autocorrect=1&limit=10&format=json'
       }).then(function successCallback(response) {
         albumObject = response;
         return albumObject.data;
@@ -68,4 +71,13 @@ app.factory('discGoFactory', function($http) {
   function getArtistName(){
     return artistName;
   }
+
+  function storeUrl(searchCriteria) {
+    ticketMaster = 'http://www.ticketmaster.com/search?tm_link=tm_header_search&user_input=' + searchCriteria + '&q=' + searchCriteria;
+  }
+
+  function getUrl(){
+    return ticketMaster;
+  }
+
 });
