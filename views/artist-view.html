@@ -2,26 +2,7 @@
   <div class = "artistName">
     <h1>{{artist}}</h1>
   </div>
-
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-<div class="navbar-header">
-     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-     </button>
-   </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a anchor-smooth-scroll="albums">ALBUMS</a></li>
-        <li><a anchor-smooth-scroll="tracks">TRACKS</a></li>
-        <li><a href="#">SEARCH</a></li>
-      </ul>
-    </div>
-  </div>
 </div>
-</nav>
 
 
 
@@ -29,8 +10,7 @@
 <div class="container-fluid" id="records">
 <div id="backgroundContainer">
   <div class="row">
-    <div class="col-sm-"></div>
-
+    <div class="tB"><a anchor-smooth-scroll="albums" class="topBar">ALBUMS</a><a anchor-smooth-scroll="tracks" class="topBar">TRACKS</a><a href="#" class="topBar">SEARCH</a></div>
       <div class="col-sm-6">
         <img class = "artistImage" ng-src="{{artistImage}}"/>
         <a href="{{onTourUrl}}" target="_blank"><img src="images/ONTOUR.png" class="tour" on-tour ng-if="onTourData == 1"/></a>
