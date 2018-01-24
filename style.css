@@ -16,6 +16,7 @@ body {
 .topBanner {
     position: relative;
     height: 20%;
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     border: 0px;
@@ -42,7 +43,7 @@ body {
 
 @media only screen and (max-width: 500px), only screen and (max-device-width: 500px) {
   .topBar {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 }
 .navbar {
@@ -201,7 +202,6 @@ input[type=text]:focus {
 }
 
 .containter-foot {
-  display: block;
   background-color: #f6f2f7;
   width: 100%;
 }
